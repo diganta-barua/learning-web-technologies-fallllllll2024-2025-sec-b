@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Type Your Information</h1><br>
+    <input type="text" id="input">
+    <button type="button" id="add">+</button>
+    <br>
+    <button type="button">save</button>
+    <p id="notify"></p>
+
+</body>
+<script>
+    const add = document.getElementById('add');
+    if (add) { add.addEventListener('click', adding); }
+
+    function adding() {
+        let data = document.getElementById('input').value;
+        if (data != '') {
+            if (data.includes('name')) {
+                let inp = document.createElement("input");
+                inp.setAttribute("type", "text");
+                inp.setAttribute("placeholder", "enter your name")
+                document.body.appendChild(inp);
+                let linebreak = document.createElement("br");
+                document.body.appendChild(linebreak);
+
+            }
+            if (data != '') {
+                if (data.includes('password')) {
+                    let inp = document.createElement("input");
+                    inp.setAttribute("type", "password");
+                    inp.setAttribute("placeholder", "enter your password")
+                    document.body.appendChild(inp);
+                    let linebreak = document.createElement("br")
+                    document.body.appendChild(linebreak);
+                }
+            }
+            if (data != '') {
+                if (data.includes('address')) {
+                    let inp = document.createElement("input");
+                    inp.setAttribute("type", "address");
+                    inp.setAttribute("placeholder", "enter your address")
+                    document.body.appendChild(inp);
+                    let linebreak = document.createElement("br")
+                    document.body.appendChild(linebreak);
+                }
+            }
+            if (data != '') {
+                if (data.includes('date')) {
+                    let inp = document.createElement("input");
+                    inp.setAttribute("type", "date");
+                    inp.setAttribute("placeholder", "enter your date")
+                    document.body.appendChild(inp);
+                    let linebreak = document.createElement("br")
+                    document.body.appendChild(linebreak);
+                }
+            }
+        }
+        else {
+            document.getElementById('notify').value.innerText = "error"
+        }
+    }
+</script>
+
+</html>
