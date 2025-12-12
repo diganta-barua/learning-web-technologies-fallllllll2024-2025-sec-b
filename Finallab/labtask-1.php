@@ -37,13 +37,13 @@ $n2 = 1;
 $n3 = 57;
     echo"<br>";
 
-if ($n1 > $n2 && $n1 > $n3) {
-    echo "large num {$n1}";
-} elseif ($n2 > $n1 && $n2 > $n3) {
-    echo "large num {$n2}";
-} else {
-    echo "large num {$n3}";
-}
+    if ($n1 > $n2 && $n1 > $n3) {
+        echo "large num {$n1}";
+        } elseif ($n2 > $n1 && $n2 > $n3) {
+            echo "large num {$n2}";
+    } else {
+          echo "large num {$n3}";
+    }
     echo"<br>";
 
 for($n=10; $n<101; $n++){
@@ -57,24 +57,79 @@ $arr=[2,4,51,4,6];
 
 for($i=0; $i<5; $i++)
 {
-if($arr[$i]===51){
-    echo"51 found a index {$i}";
+    if($arr[$i]===51){
+        echo"51 found a index {$i}";
 }
 }
     echo"<br>";
+
+
     $c=1;
 for($i=0; $i<3; $i++)
 {
-for($j=0; $j<$c; $j++)
-{
+    for($j=0; $j<$c; $j++)
+    {
      echo"*";
    
-
 }
   $c++;
    echo"<br>";
 }
+ echo "<br>";
+
+    $c1 = 3;
+    for ($i1 = 0; $i1 < 3; $i1++) {
+        for ($j1 = 0; $j1 < $c1; $j1++) {
+            echo ($j1 + 1);
+        }
+        $c1--;
+        echo "<br>";
+    }
+
+    echo "<br>";
+
+
+    $c3 = 1;
+    $char = 65;
+    for ($i1 = 0; $i1 < 3; $i1++) {
+        for ($j1 = 0; $j1 < $c3; $j1++) {
+            echo (chr($char));
+            $char++;
+        }
+        $c3++;
+        echo "<br>";
+    }
+
+    echo '<br>';
+
+
+ $arr = [
+        [1, 2, 3, 'A'],
+        [1, 2, 'B', 'C'],
+        [1, 'D', 'E', 'F']
+        ];
+
+$a = 3;
+    for ($i = 0; $i < 3; $i++) {
+        for ($j = 0; $j < $a; $j++) {
+            echo $arr[$i][$j];
+        }
+        $a--;
+        echo '<br>';
+    }
+    echo '<br>';
+
+
+ $a = 3;
+    for ($k = 0; $k < 3; $k++) {
+        for ($l = $a; $l < 4; $l++) {
+            echo $arr[$k][$l];
+        }
+        $a--;
+        echo '<br>';
+    }
 
 
 ?>
+
 
