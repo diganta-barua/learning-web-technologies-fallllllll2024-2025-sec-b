@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-    <form action="add.php" method="post">
+    <form action="display.php" method="post">
     <fieldset>
         <legend>ADD PRODUCTS</legend>
         Name <br>
@@ -52,4 +52,5 @@
     </style>
     <script src="ajax.js"></script>
 </body>
+
 </html>
