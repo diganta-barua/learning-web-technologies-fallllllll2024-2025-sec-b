@@ -9,8 +9,7 @@ if(isset($_POST['submit'])){
     $buying_price = trim($_POST['BP'] );
     $selling_price = trim($_POST['SP'] );
     $errors = [];
-
-    // Validating inp
+    
     if ($product_name === '') {
         $errors[] = "Product name is required.";
     }
@@ -46,4 +45,5 @@ if(isset($_POST['submit'])){
         }
     }
 }
+
 ?>
