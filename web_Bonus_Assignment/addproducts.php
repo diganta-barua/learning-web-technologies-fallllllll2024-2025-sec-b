@@ -38,20 +38,21 @@
                 </tr>
             </thead>
             <?php
-            // fetching data\ 
-            require_once "db.php";
-            $products = read("SELECT * ,(selling_price-buying_price) as profit FROM `product` where display ='yes';");
-            foreach($products as $product){
-            ?>
-            <tbody>
-                <tr>
-                    <td><?php echo $product['name']; ?></td>
-                    <td><?php echo $product['profit']; ?></td>
-                    <td>
-                        <a href="edit.php?name=<?php echo $product['name']; ?>&BP=<?php echo $product['buying_price']; ?>&SP=<?php echo $product['selling_price']; ?>" style="margin-right: 20px;">Edit</a>
-                        <a href="delete_feature.php?name=<?php echo $product['name']; ?> &BP=<?php echo $product['buying_price']; ?>&SP=<?php echo $product['selling_price']; ?>">Delete</a>
-                    </td>
-                </tr>
+
+require_once "db.php";
+$products = read("SELECT * ,(selling_price-buying_price) as profit FROM `product` where display ='yes';");
+foreach($products as $product){
+?>
+           
+    <tbody>
+         <tr>
+            <td><?php echo $product['name']; ?></td>
+            <td><?php echo $product['profit']; ?></td>
+            <td>
+                <a href="edit.php?name=<?php echo $product['name']; ?>&BP=<?php echo $product['buying_price']; ?>&SP=<?php echo $product['selling_price']; ?>" style="margin-right: 20px;">Edit</a>
+                <a href="delete_feature.php?name=<?php echo $product['name']; ?> &BP=<?php echo $product['buying_price']; ?>&SP=<?php echo $product['selling_price']; ?>">Delete</a>
+            </td>
+        </tr>
             <?php } ?>
             </tbody>
         </table>
@@ -66,4 +67,5 @@
     </style>
 
 </body>
+
 </html>
